@@ -33,7 +33,6 @@ public class UserService {
 
         String normalizedUsername = username.trim();
 
-        // Optional: enforce minimal password length
         if (password.length() < 6) {
             throw new CustomerServiceException("Password must be at least 6 characters long");
         }
