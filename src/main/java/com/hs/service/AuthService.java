@@ -2,10 +2,12 @@ package com.hs.service;
 
 import org.springframework.stereotype.Service;
 
+import com.hs.dto.LoginRequest;
+
 import java.util.List;
 
 @Service
-public class AuthService {
+public class AuthService implements IAuthService {
 
     private final JwtService jwtService;
 
@@ -13,6 +15,7 @@ public class AuthService {
         this.jwtService = jwtService;
     }
 
+    @Override
     public String login(String username, String password) {
 
         // 🔥 Replace with DB validation
